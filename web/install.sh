@@ -62,13 +62,13 @@ install_php(){
 dowload_webfile(){
 	mkdir -p /usr/share/nginx/html/${domain}
 	cd /usr/share/nginx/html/${domain}
-	wget https://raw.githubusercontent.com/gongxipx/cdnfly/main/cdn/api.php
-	wget https://raw.githubusercontent.com/gongxipx/cdnfly/main/cdn/config.php
-	wget https://raw.githubusercontent.com/gongxipx/cdnfly/main/cdn/index.php
-	wget https://raw.githubusercontent.com/gongxipx/cdnfly/main/cdn/monitor.php
-	wget https://raw.githubusercontent.com/gongxipx/cdnfly/main/cdn/update.php
+	wget https://raw.githubusercontent.com/gongxipx/cdnfly-5.1.13/main/web/api.php
+	wget https://raw.githubusercontent.com/gongxipx/cdnfly-5.1.13/main/web/config.php
+	wget https://raw.githubusercontent.com/gongxipx/cdnfly-5.1.13/main/web/index.php
+	wget https://raw.githubusercontent.com/gongxipx/cdnfly-5.1.13/main/web/monitor.php
+	wget https://raw.githubusercontent.com/gongxipx/cdnfly-5.1.13/main/web/update.php
 	sed -i "s#https://update.cdnfly.cn/master/upgrades?version_num=#http://${domain}/master/upgrades?version_num=#g" /usr/share/nginx/html/${domain}/update.php
-	wget https://raw.githubusercontent.com/gongxipx/cdnfly/main/cdn/version.json
+	wget https://raw.githubusercontent.com/gongxipx/cdnfly-5.1.13/main/web/version.json
 }
 
 #函数执行模块
